@@ -1,0 +1,614 @@
+schema_version = "1.1.0"
+
+[[layers]]
+id = "00_typing"
+order = 0
+path = "pkgs/00_typing"
+description = "Typing"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = []
+
+[[layers]]
+id = "01_spec"
+order = 1
+path = "pkgs/01_spec"
+description = "Spec"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing"]
+
+[[layers]]
+id = "02_model"
+order = 2
+path = "pkgs/02_model"
+description = "Model"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec"]
+
+[[layers]]
+id = "10_core"
+order = 10
+path = "pkgs/10_core"
+description = "Core"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model"]
+
+[[layers]]
+id = "20_base"
+order = 20
+path = "pkgs/20_base"
+description = "Base"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core"]
+
+[[layers]]
+id = "30_orm"
+order = 30
+path = "pkgs/30_orm"
+description = "ORM"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base"]
+
+[[layers]]
+id = "40_atoms"
+order = 40
+path = "pkgs/40_atoms"
+description = "Atoms"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm"]
+
+[[layers]]
+id = "45_kernel"
+order = 45
+path = "pkgs/45_kernel"
+description = "Kernel"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms"]
+
+[[layers]]
+id = "50_runtime"
+order = 50
+path = "pkgs/50_runtime"
+description = "Runtime"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms", "45_kernel"]
+
+[[layers]]
+id = "60_ops"
+order = 60
+path = "pkgs/60_ops"
+description = "Operations"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms", "45_kernel", "50_runtime"]
+
+[[layers]]
+id = "70_concrete"
+order = 70
+path = "pkgs/70_concrete"
+description = "Concrete"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms", "45_kernel", "50_runtime", "60_ops"]
+
+[[layers]]
+id = "80_facade"
+order = 80
+path = "pkgs/80_facade"
+description = "Facade"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms", "45_kernel", "50_runtime", "60_ops", "70_concrete"]
+
+[[layers]]
+id = "90_engines"
+order = 90
+path = "pkgs/90_engines"
+description = "Engines"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms", "45_kernel", "50_runtime", "60_ops", "70_concrete", "80_facade"]
+
+[[layers]]
+id = "95_client"
+order = 95
+path = "pkgs/95_client"
+description = "Client"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms", "45_kernel", "50_runtime", "60_ops", "70_concrete", "80_facade", "90_engines"]
+
+[[layers]]
+id = "96_examples"
+order = 96
+path = "pkgs/96_examples"
+description = "Examples"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms", "45_kernel", "50_runtime", "60_ops", "70_concrete", "80_facade", "90_engines", "95_client"]
+
+[[layers]]
+id = "97_tests"
+order = 97
+path = "pkgs/97_tests"
+description = "Test Suite"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms", "45_kernel", "50_runtime", "60_ops", "70_concrete", "80_facade", "90_engines", "95_client", "96_examples"]
+
+[[layers]]
+id = "98_experimental"
+order = 98
+path = "pkgs/98_experimental"
+description = "Experimental"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms", "45_kernel", "50_runtime", "60_ops", "70_concrete", "80_facade", "90_engines", "95_client", "96_examples", "97_tests"]
+
+[[layers]]
+id = "99_deprecated"
+order = 99
+path = "pkgs/99_deprecated"
+description = "Deprecated"
+same_layer_dependencies = "allowed"
+allowed_dependency_layers = ["00_typing", "01_spec", "02_model", "10_core", "20_base", "30_orm", "40_atoms", "45_kernel", "50_runtime", "60_ops", "70_concrete", "80_facade", "90_engines", "95_client", "96_examples", "97_tests", "98_experimental"]
+
+[[packages]]
+id = "tigrbl_typing"
+name = "tigrbl-typing"
+layer = "00_typing"
+order = 0
+path = "pkgs/00_typing/tigrbl_typing"
+ecosystem = "pypi"
+
+[[packages]]
+id = "tigrbl_spec"
+name = "tigrbl_spec"
+layer = "01_spec"
+order = 0
+path = "pkgs/01_spec/tigrbl_spec"
+ecosystem = "pypi"
+
+[[packages]]
+id = "tigrbl_model"
+name = "tigrbl_model"
+layer = "02_model"
+order = 0
+path = "pkgs/02_model/tigrbl_model"
+ecosystem = "pypi"
+
+[[packages]]
+id = "tigrbl_core"
+name = "tigrbl-core"
+layer = "10_core"
+order = 0
+path = "pkgs/10_core/tigrbl_core"
+ecosystem = "pypi"
+dependencies = ["tigrbl_spec", "tigrbl_typing"]
+
+[[packages]]
+id = "tigrbl_migrations"
+name = "tigrbl-migrations"
+layer = "10_core"
+order = 0
+path = "pkgs/10_core/tigrbl_migrations"
+ecosystem = "pypi"
+
+[[packages]]
+id = "tigrbl_base"
+name = "tigrbl-base"
+layer = "20_base"
+order = 0
+path = "pkgs/20_base/tigrbl_base"
+ecosystem = "pypi"
+dependencies = ["tigrbl_core"]
+
+[packages.metadata.tigrbl.legacy_dependency_exceptions]
+tigrbl_atoms = "Existing batch/session helper coupling predates this layer index and must be removed separately."
+
+[[packages]]
+id = "tigrbl_orm"
+name = "tigrbl-orm"
+layer = "30_orm"
+order = 0
+path = "pkgs/30_orm/tigrbl_orm"
+ecosystem = "pypi"
+
+[[packages]]
+id = "tigrbl_atoms"
+name = "tigrbl-atoms"
+layer = "40_atoms"
+order = 0
+path = "pkgs/40_atoms/tigrbl_atoms"
+ecosystem = "pypi"
+dependencies = ["tigrbl_core", "tigrbl_typing"]
+
+[packages.metadata.tigrbl.legacy_dependency_exceptions]
+tigrbl_ops_olap = "Existing atom test/runtime coupling predates this layer index and must be removed separately."
+tigrbl_ops_oltp = "Existing atom test/runtime coupling predates this layer index and must be removed separately."
+tigrbl_ops_realtime = "Existing atom test/runtime coupling predates this layer index and must be removed separately."
+tigrbl_ops_webtransport = "Existing atom test/runtime coupling predates this layer index and must be removed separately."
+
+[[packages]]
+id = "tigrbl_kernel"
+name = "tigrbl-kernel"
+layer = "45_kernel"
+order = 0
+path = "pkgs/45_kernel/tigrbl_kernel"
+ecosystem = "pypi"
+dependencies = ["tigrbl_atoms", "tigrbl_core", "tigrbl_typing"]
+
+[[packages]]
+id = "tigrbl_runtime"
+name = "tigrbl-runtime"
+layer = "50_runtime"
+order = 0
+path = "pkgs/50_runtime/tigrbl_runtime"
+ecosystem = "pypi"
+dependencies = ["tigrbl_atoms", "tigrbl_base", "tigrbl_core", "tigrbl_kernel", "tigrbl_typing"]
+
+[[packages]]
+id = "tigrbl_ops_olap"
+name = "tigrbl-ops-olap"
+layer = "60_ops"
+order = 0
+path = "pkgs/60_ops/tigrbl_ops_olap"
+ecosystem = "pypi"
+
+[[packages]]
+id = "tigrbl_ops_oltp"
+name = "tigrbl-ops-oltp"
+layer = "60_ops"
+order = 0
+path = "pkgs/60_ops/tigrbl_ops_oltp"
+ecosystem = "pypi"
+dependencies = ["tigrbl_base", "tigrbl_core", "tigrbl_orm"]
+
+[[packages]]
+id = "tigrbl_ops_realtime"
+name = "tigrbl-ops-realtime"
+layer = "60_ops"
+order = 0
+path = "pkgs/60_ops/tigrbl_ops_realtime"
+ecosystem = "pypi"
+
+[[packages]]
+id = "tigrbl_ops_webtransport"
+name = "tigrbl-ops-webtransport"
+layer = "60_ops"
+order = 0
+path = "pkgs/60_ops/tigrbl_ops_webtransport"
+ecosystem = "pypi"
+
+[[packages]]
+id = "tigrbl_concrete"
+name = "tigrbl-concrete"
+layer = "70_concrete"
+order = 0
+path = "pkgs/70_concrete/tigrbl_concrete"
+ecosystem = "pypi"
+dependencies = ["tigrbl_atoms", "tigrbl_base", "tigrbl_core", "tigrbl_ops_olap", "tigrbl_ops_oltp", "tigrbl_ops_realtime", "tigrbl_ops_webtransport", "tigrbl_runtime", "tigrbl_typing"]
+
+[[packages]]
+id = "tigrbl"
+name = "tigrbl"
+layer = "80_facade"
+order = 0
+path = "pkgs/80_facade/tigrbl"
+ecosystem = "pypi"
+dependencies = ["tigrbl_atoms", "tigrbl_base", "tigrbl_concrete", "tigrbl_core", "tigrbl_kernel", "tigrbl_ops_oltp", "tigrbl_orm", "tigrbl_runtime"]
+
+[packages.metadata.tigrbl.legacy_dependency_exceptions]
+tigrbl_canon = "Legacy facade compatibility import retained while deprecated canon paths are retired."
+
+[[packages]]
+id = "tigrbl_engine_bigquery"
+name = "tigrbl_engine_bigquery"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_bigquery"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_clickhouse"
+name = "tigrbl_engine_clickhouse"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_clickhouse"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_csv"
+name = "tigrbl_engine_csv"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_csv"
+ecosystem = "pypi"
+dependencies = ["tigrbl", "tigrbl_engine_pandas"]
+
+[[packages]]
+id = "tigrbl_engine_dataframe"
+name = "tigrbl_engine_dataframe"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_dataframe"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_duckdb"
+name = "tigrbl_engine_duckdb"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_duckdb"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_inmemcache"
+name = "tigrbl_engine_inmemcache"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_inmemcache"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_inmemory"
+name = "tigrbl_engine_inmemory"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_inmemory"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_membloom"
+name = "tigrbl_engine_membloom"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_membloom"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_memdedupe"
+name = "tigrbl_engine_memdedupe"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_memdedupe"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_memkv"
+name = "tigrbl_engine_memkv"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_memkv"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_memlru"
+name = "tigrbl_engine_memlru"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_memlru"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_mempubsub"
+name = "tigrbl_engine_mempubsub"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_mempubsub"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_memqueue"
+name = "tigrbl_engine_memqueue"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_memqueue"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_memrate"
+name = "tigrbl_engine_memrate"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_memrate"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_mariadb"
+name = "tigrbl_engine_mariadb"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_mariadb"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_numpy"
+name = "tigrbl_engine_numpy"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_numpy"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_pandas"
+name = "tigrbl_engine_pandas"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_pandas"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_pgsqli_wal"
+name = "tigrbl_engine_pgsqli_wal"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_pgsqli_wal"
+ecosystem = "pypi"
+
+[[packages]]
+id = "tigrbl_engine_postgres"
+name = "tigrbl_engine_postgres"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_postgres"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_pyspark"
+name = "tigrbl_engine_pyspark"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_pyspark"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_redis"
+name = "tigrbl_engine_redis"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_redis"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_rediscachethrough"
+name = "tigrbl_engine_rediscachethrough"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_rediscachethrough"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_rom"
+name = "tigrbl_engine_rom"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_rom"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_s3"
+name = "tigrbl_engine_s3"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_s3"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_s3fs"
+name = "tigrbl_engine_s3fs"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_s3fs"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_snowflake"
+name = "tigrbl_engine_snowflake"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_snowflake"
+ecosystem = "pypi"
+
+[[packages]]
+id = "tigrbl_engine_sqlite"
+name = "tigrbl_engine_sqlite"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_sqlite"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_engine_xlsx"
+name = "tigrbl_engine_xlsx"
+layer = "90_engines"
+order = 0
+path = "pkgs/90_engines/tigrbl_engine_xlsx"
+ecosystem = "pypi"
+dependencies = ["tigrbl"]
+
+[[packages]]
+id = "tigrbl_client"
+name = "tigrbl_client"
+layer = "95_client"
+order = 0
+path = "pkgs/95_client/tigrbl_client"
+ecosystem = "pypi"
+
+[[packages]]
+id = "equivalence_contracts"
+name = "tigrbl-equivalence-contracts"
+layer = "96_examples"
+order = 0
+path = "pkgs/96_examples/equivalence_contracts"
+ecosystem = "pypi"
+dependencies = ["tigrbl", "tigrbl_core"]
+
+[[packages]]
+id = "tigrbl_examples"
+name = "tigrbl-examples"
+layer = "96_examples"
+order = 0
+path = "pkgs/96_examples/tigrbl_examples"
+ecosystem = "pypi"
+dependencies = ["tigrbl", "tigrbl_client"]
+
+[[packages]]
+id = "transport_surface_matrix_demo"
+name = "tigrbl-transport-surface-matrix-demo"
+layer = "96_examples"
+order = 0
+path = "pkgs/96_examples/transport_surface_matrix_demo"
+ecosystem = "pypi"
+dependencies = ["tigrbl", "tigrbl_core", "tigrbl_kernel"]
+
+[[packages]]
+id = "websocket_realtime_ops"
+name = "tigrbl-websocket-realtime-ops-demo"
+layer = "96_examples"
+order = 0
+path = "pkgs/96_examples/websocket_realtime_ops"
+ecosystem = "pypi"
+dependencies = ["tigrbl", "tigrbl_core"]
+
+[[packages]]
+id = "tigrbl_tests"
+name = "tigrbl_tests"
+layer = "97_tests"
+order = 0
+path = "pkgs/97_tests/tigrbl_tests"
+ecosystem = "pypi"
+dependencies = ["tigrbl", "tigrbl_client", "tigrbl_examples"]
+
+[[packages]]
+id = "tigrbl_mcp"
+name = "tigrbl-mcp"
+layer = "98_experimental"
+order = 0
+path = "pkgs/98_experimental/tigrbl_mcp"
+ecosystem = "pypi"
+dependencies = ["tigrbl", "tigrbl_core"]
+
+[[packages]]
+id = "tigrbl_canon"
+name = "tigrbl-canon"
+layer = "99_deprecated"
+order = 0
+path = "pkgs/99_deprecated/tigrbl_canon"
+ecosystem = "pypi"
+dependencies = ["tigrbl", "tigrbl_atoms", "tigrbl_base", "tigrbl_concrete", "tigrbl_core", "tigrbl_ops_oltp", "tigrbl_runtime"]

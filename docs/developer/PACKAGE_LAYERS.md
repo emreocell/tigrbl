@@ -1,6 +1,6 @@
 # Package Layers
 
-`pkgs/LAYERS.toml` is the machine-readable package layer index. This document is
+The root [`index.toml`](../../index.toml) is the machine-readable package layer index. This document is
 the human-readable projection for repository maintainers.
 
 The index is dependency-oriented and the package directories physically follow
@@ -11,8 +11,10 @@ dependency order.
 ## Dependency Rule
 
 Packages may depend on packages in a lower-numbered layer or the same layer.
-Higher-layer dependencies are allowed only when listed in `pkgs/LAYERS.toml` as
-explicit dependency exceptions with a reason.
+Higher-layer dependencies require a reason in the source package's
+`metadata.tigrbl.legacy_dependency_exceptions`. Repository tests check these
+entries against the runtime declarations in `pyproject.toml`. The shared
+schema validates the acyclic dependency graph recorded in `dependencies`.
 
 ## Layers
 
@@ -21,7 +23,7 @@ explicit dependency exceptions with a reason.
 | 00 | Typing | `tigrbl_typing` |
 | 01 | Spec | `tigrbl_spec` |
 | 02 | Model | `tigrbl_model` |
-| 10 | Core | `tigrbl_core` |
+| 10 | Core | `tigrbl_core`, `tigrbl_migrations` |
 | 20 | Base | `tigrbl_base` |
 | 30 | ORM | `tigrbl_orm` |
 | 40 | Atoms | `tigrbl_atoms` |
@@ -57,6 +59,6 @@ Current exceptions:
 
 When adding, removing, or moving a package:
 
-1. Update `pkgs/LAYERS.toml`.
+1. Update `index.toml`.
 2. Update this document and `docs/developer/PACKAGE_CATALOG.md`.
 3. Run `uv run pytest pkgs/97_tests/tigrbl_tests/tests/unit/test_package_layers.py -q`.

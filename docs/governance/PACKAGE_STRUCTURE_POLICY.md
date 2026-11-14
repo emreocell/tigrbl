@@ -4,7 +4,7 @@
 
 The repository root should remain small and predictable. It may contain:
 
-- package/workspace manifests (`pyproject.toml`)
+- package/workspace manifests (`pyproject.toml`, `index.toml`)
 - governance entry points (`README.md`, `LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`)
 - source roots (`pkgs/`, `examples/`, `docs/`)
 - repository configuration directories such as `.github/`
@@ -21,10 +21,10 @@ The root must not accumulate:
 
 ## Source roots
 
-- `pkgs/<layer-id>/` - numbered Python package layers governed by `pkgs/LAYERS.toml`
+- `pkgs/<layer-id>/` - numbered Python package layers governed by [`index.toml`](../../index.toml)
 - `examples/` - non-authoritative demos and verification helpers
 
-Logical package layering is governed by `pkgs/LAYERS.toml` and projected in
+Logical package layering is governed by [`index.toml`](../../index.toml) and projected in
 `docs/developer/PACKAGE_LAYERS.md`. Physical package roots carry the same layer
 ids used by the layer index.
 

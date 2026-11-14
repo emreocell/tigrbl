@@ -1,7 +1,7 @@
 # Package Catalog
 
 This document is the canonical workspace inventory for Python package locations.
-Layer order is governed by `pkgs/LAYERS.toml` and projected in
+Layer order is governed by [`index.toml`](../../index.toml) and projected in
 `docs/developer/PACKAGE_LAYERS.md`.
 
 ## Counts
