@@ -21,6 +21,7 @@ ALLOWED_ROOT_ENTRIES = {
     "bindings",
     "docs",
     "examples",
+    "index.toml",
     "perf.sqlite",
     "pkgs",
     "pyproject.toml",

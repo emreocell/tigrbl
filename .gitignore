@@ -16,6 +16,7 @@
 !/bindings/
 !/docs/
 !/examples/
+!/index.toml
 !/pkgs/
 !/pyproject.toml
 !/tests/

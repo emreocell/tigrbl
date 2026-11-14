@@ -25,7 +25,7 @@ Python packages live under one of:
 
 - `pkgs/<layer-id>/<package>/`
 
-Layer membership is governed by `pkgs/LAYERS.toml` and projected in
+Layer membership is governed by [`index.toml`](../../index.toml) and projected in
 `docs/developer/PACKAGE_LAYERS.md`. The physical source root is the layer id.
 
 Each Python package root must contain:
