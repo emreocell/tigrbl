@@ -21,9 +21,8 @@ CERTIFIED_PYDANTIC_CORE_IMPORTS = {"PydanticUndefined"}
 
 # These runtime dependencies remain on Pydantic and outside the parity matrix.
 DIRECT_PYDANTIC_IMPORTS = {
-    "10_core/tigrbl_core/tigrbl_core/schema/materialize.py": {"TypeAdapter"},
+    "10_core/tigrbl_core/tigrbl_core/schema/materialize.py": {"AfterValidator", "TypeAdapter"},
     "10_core/tigrbl_core/tigrbl_core/schema/result.py": {"TypeAdapter"},
-    "30_orm/tigrbl_orm/tigrbl_orm/orm/mixins/principals.py": {"UUID7"},
 }
 
 CERTIFIED_CONFIG_OPTIONS = {
