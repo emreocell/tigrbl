@@ -3,9 +3,16 @@
 from __future__ import annotations
 
 from functools import lru_cache
-from typing import Any
+from typing import Annotated, Any, Callable
 
-from pydantic import TypeAdapter
+from pydantic import AfterValidator, Field, TypeAdapter
+
+
+def validated_type(
+    annotation: type, validator: Callable[[Any], Any], **constraints: Any
+) -> Any:
+    """Build a field annotation that validates a parsed value with a callable."""
+    return Annotated[annotation, Field(**constraints), AfterValidator(validator)]
 
 
 @lru_cache(maxsize=512)
@@ -25,4 +32,4 @@ def _materialize_field_value(value: Any, annotation: Any) -> Any:
     return adapter.validate_python(value)
 
 
-__all__ = ["_materialize_field_value"]
+__all__ = ["_materialize_field_value", "validated_type"]
