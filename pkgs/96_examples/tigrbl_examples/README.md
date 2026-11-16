@@ -35,6 +35,23 @@ Maintainers, extension authors, and documentation workflows that need importable
 
 It exposes example modules directly under the `tigrbl_examples` import root so callers import `tigrbl_examples.<module>` without an extra nested examples namespace.
 
+## Start here
+
+Read the beginner app lessons in this order:
+
+1. [App initialization](tigrbl_examples/05_beginner_app_api/test_01_tigrbl_app_init.py) registers a model and initializes the app.
+2. [Router composition](tigrbl_examples/05_beginner_app_api/test_02_app_router.py) attaches a router and checks the registered routes.
+3. [JSON-RPC mounting](tigrbl_examples/05_beginner_app_api/test_03_jsonrpc_mount.py) mounts a JSON-RPC endpoint at `/rpc` while preserving existing routes.
+
+Run only these three lessons from the repository root:
+
+```sh
+uv run --frozen --package tigrbl-examples python -m pytest -q \
+  pkgs/96_examples/tigrbl_examples/tigrbl_examples/05_beginner_app_api/test_01_tigrbl_app_init.py \
+  pkgs/96_examples/tigrbl_examples/tigrbl_examples/05_beginner_app_api/test_02_app_router.py \
+  pkgs/96_examples/tigrbl_examples/tigrbl_examples/05_beginner_app_api/test_03_jsonrpc_mount.py
+```
+
 ## Install
 
 ```bash
