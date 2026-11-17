@@ -7,7 +7,8 @@ The framework keeps these public docs/spec surfaces:
 - `/openapi.json`
 - Swagger UI at `/docs`
 - `/openrpc.json`
-- Lens / OpenRPC UI at `/lens`
+- ZDoc at `/zdoc` shows REST and JSON-RPC in one viewer. Compatibility bookmarks at `/lens` also serve ZDoc.
+- An app can add a WebSocket tab with `app.mount_zdoc(asyncapi_path="/asyncapi.json")` and serve its own AsyncAPI 3.0 JSON document at that path.
 - JSON Schema bundle at `/schemas.json`
 
 ## Unsupported / de-scoped UI rows
