@@ -9,7 +9,7 @@ from urllib.parse import quote, urlsplit
 
 from tigrbl_concrete._concrete._response import Response
 
-TIGRBL_ZDOC_VERSION = "0.1.0"
+TIGRBL_ZDOC_VERSION = "0.1.1"
 _PACKAGE = "@tigrbljs/tigrbl-zdoc"
 _CDN = f"https://esm.sh/{_PACKAGE}@{TIGRBL_ZDOC_VERSION}"
 
