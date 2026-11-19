@@ -266,7 +266,9 @@ def _make_dep_atom_step(run_fn: _AtomRun, dep: Any, *, label: str) -> StepFn:
     return _step
 
 
-def _inject_pre_tx_dep_atoms(chains: Dict[str, List[StepFn]], sp: Any | None) -> None:
+def _inject_pre_tx_dep_atoms(
+    chains: Dict[str, List[StepFn]], sp: Any | None, security_dependencies: tuple[Any, ...] | None = None
+) -> None:
     if sp is None:
         return
     try:
@@ -280,7 +282,9 @@ def _inject_pre_tx_dep_atoms(chains: Dict[str, List[StepFn]], sp: Any | None) ->
             return
 
     pre_tx = chains.setdefault("PRE_TX_BEGIN", [])
-    for idx, dep in enumerate(getattr(sp, "secdeps", ()) or ()):
+    if security_dependencies is None:
+        security_dependencies = tuple(getattr(sp, "secdeps", ()) or ())
+    for idx, dep in enumerate(security_dependencies):
         pre_tx.append(
             _make_dep_atom_step(
                 sec_run,

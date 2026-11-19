@@ -196,11 +196,6 @@ class _PackedExecuteMixin:
                 )
 
             try:
-                await self._run_hot_jsonrpc_security_dependencies(
-                    ctx,
-                    hot,
-                    program_hot_runner_id,
-                )
                 if hot.transport_kind_id == _TRANSPORT_KIND_JSONRPC and isinstance(
                     hot.parsed_json, dict
                 ):

@@ -225,6 +225,7 @@ def _compile_plan(self: Any, app: Any) -> KernelPlan:
     egress_chain = self._build_egress(app)
     phases, mainline_phases, error_phases = _phase_info_map(DEFAULT_PHASE_ORDER)
 
+    resolve_security = getattr(app, "_tigrbl_security_dependencies", None)
     for model in _compile_models(app):
         for sp in _opspecs(model):
             meta_index = len(opmeta)
@@ -238,7 +239,11 @@ def _compile_plan(self: Any, app: Any) -> KernelPlan:
                 opviews.append(None)
             phase_chains[meta_index] = deepmerge_phase_chains(
                 ingress_chain,
-                self._build_op(model, sp.alias),
+                self._build_op(
+                    model,
+                    sp.alias,
+                    security_dependencies=resolve_security(model, sp) if resolve_security else None,
+                ),
                 egress_chain,
             )
 

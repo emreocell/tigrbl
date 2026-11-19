@@ -268,14 +268,16 @@ def _batch_policy_for_meta(meta: Any) -> BatchOpPlan:
     )
 
 
-def _build_op(self, model: type, alias: str) -> Dict[str, List[StepFn]]:
+def _build_op(
+    self, model: type, alias: str, *, security_dependencies: tuple[Any, ...] | None = None
+) -> Dict[str, List[StepFn]]:
     from .core import DEFAULT_PHASE_ORDER
 
     try:
         cache = self._phase_chains.setdefault(model, {})
     except TypeError:
         cache = self._phase_chains_by_id.setdefault(id(model), {})
-    stamp = _phase_stamp(self, model, alias)
+    stamp = (*_phase_stamp(self, model, alias), security_dependencies)
     cached = cache.get(alias)
     if cached is not None and cached[0] == stamp:
         return cached[1]
@@ -316,7 +318,7 @@ def _build_op(self, model: type, alias: str) -> Dict[str, List[StepFn]]:
             alias,
         )
 
-    _inject_pre_tx_dep_atoms(chains, sp)
+    _inject_pre_tx_dep_atoms(chains, sp, security_dependencies)
 
     for phase in DEFAULT_PHASE_ORDER:
         chains.setdefault(phase, [])
