@@ -313,6 +313,10 @@ def _inject_atoms(
     batch_policy: Mapping[str, Any] | None = None,
 ) -> None:
     order = {name: i for i, name in enumerate(_ev.all_events_ordered())}
+    bound_custom_handler = any(
+        getattr(step, "__tigrbl_bound_custom_handler__", False)
+        for step in chains.get("HANDLER", ())
+    )
 
     def _sort_key(item: _DiscoveredAtom) -> tuple[int, int]:
         anchor, run = item
@@ -363,6 +367,8 @@ def _inject_atoms(
             and _subject.startswith("handler_")
         ):
             handler_target = _subject.removeprefix("handler_")
+            if handler_target == "custom" and bound_custom_handler:
+                continue  # The model already wired this operation into HANDLER.
             if handler_target != "persistence" and target and handler_target != target:
                 continue
         if domain == "dep":
