@@ -46,6 +46,8 @@ uv add tigrbl-runtime
 pip install tigrbl-runtime
 ```
 
+The base install uses the Python dispatcher. Install `tigrbl-runtime[numba]` to use Numba-compiled route dispatch with the `numba_packed` executor.
+
 ## Surface Coverage
 
 | Surface | Value |
@@ -55,7 +57,7 @@ pip install tigrbl-runtime
 | Python import root | `tigrbl_runtime` |
 | Console scripts | none declared |
 | Entry points | none declared |
-| Optional extras | none declared |
+| Optional extras | `numba` |
 | Legal files | `LICENSE`, `NOTICE` |
 | Supported Python | `3.10 | 3.11 | 3.12 | 3.13 | 3.14` |
 
@@ -79,7 +81,7 @@ Runtime authoring BCP:
 - Import roots: `tigrbl_runtime`.
 - Public symbols: `Runtime`, `RuntimeBase`.
 - Workspace dependencies: [`tigrbl-typing`](https://pypi.org/project/tigrbl-typing/), [`tigrbl-kernel`](https://pypi.org/project/tigrbl-kernel/), [`tigrbl-atoms`](https://pypi.org/project/tigrbl-atoms/), [`tigrbl-base`](https://pypi.org/project/tigrbl-base/), [`tigrbl-core`](https://pypi.org/project/tigrbl-core/).
-- External runtime dependencies: `numba>=0.61.2`.
+- Optional Numba dependency (`numba` extra): `numba>=0.61.2`.
 
 ## Usage Examples
 

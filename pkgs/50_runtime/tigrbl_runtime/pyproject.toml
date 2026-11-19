@@ -1,6 +1,6 @@
 [project]
 name = "tigrbl-runtime"
-version = "0.4.5"
+version = "0.4.6.dev1"
 description = "Execution bridge for compiled Tigrbl kernel plans and narrow runtime context/carrier compatibility."
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -42,8 +42,10 @@ dependencies = [
     "tigrbl-atoms>=0.4.5.dev5",
     "tigrbl-base>=0.4.5.dev6",
     "tigrbl-core>=0.4.5.dev6",
-    "numba>=0.61.2",
 ]
+
+[project.optional-dependencies]
+numba = ["numba>=0.61.2"]
 
 [project.urls]
 Organization = "https://github.com/tigrbl"

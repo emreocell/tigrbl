@@ -52,6 +52,8 @@ Optional extras declared in `pyproject.toml`:
 pip install "tigrbl[postgres,servers,templates,tests]"
 ```
 
+The base install uses the Python dispatcher. Install `tigrbl[numba]` to use Numba-compiled route dispatch with the `numba_packed` executor.
+
 ## Surface Coverage
 
 | Surface | Value |
@@ -61,7 +63,7 @@ pip install "tigrbl[postgres,servers,templates,tests]"
 | Python import root | `tigrbl` |
 | Console scripts | `tigrbl` |
 | Entry points | none declared |
-| Optional extras | `postgres`, `servers`, `templates`, `tests` |
+| Optional extras | `numba`, `postgres`, `servers`, `templates`, `tests` |
 | Legal files | `LICENSE`, `NOTICE` |
 | Supported Python | `3.10, 3.11, 3.12, 3.13, 3.14` |
 

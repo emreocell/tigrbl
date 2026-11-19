@@ -3909,7 +3909,7 @@ wheels = [
 
 [[package]]
 name = "tigrbl"
-version = "0.4.5"
+version = "0.4.6.dev1"
 source = { editable = "pkgs/80_facade/tigrbl" }
 dependencies = [
     { name = "aiosqlite" },
@@ -3934,6 +3934,9 @@ gunicorn = [
 ]
 hypercorn = [
     { name = "hypercorn" },
+]
+numba = [
+    { name = "tigrbl-runtime", extra = ["numba"] },
 ]
 postgres = [
     { name = "asyncpg" },
@@ -3998,13 +4001,14 @@ requires-dist = [
     { name = "tigrbl-ops-oltp", editable = "pkgs/60_ops/tigrbl_ops_oltp" },
     { name = "tigrbl-orm", editable = "pkgs/30_orm/tigrbl_orm" },
     { name = "tigrbl-runtime", editable = "pkgs/50_runtime/tigrbl_runtime" },
+    { name = "tigrbl-runtime", extras = ["numba"], marker = "extra == 'numba'", editable = "pkgs/50_runtime/tigrbl_runtime" },
     { name = "tigrbl-tests", marker = "extra == 'tests'", editable = "pkgs/97_tests/tigrbl_tests" },
     { name = "tigrcorn", marker = "extra == 'servers'" },
     { name = "tigrcorn", marker = "extra == 'tigrcorn'" },
     { name = "uvicorn", marker = "extra == 'servers'" },
     { name = "uvicorn", marker = "extra == 'uvicorn'" },
 ]
-provides-extras = ["postgres", "templates", "servers", "uvicorn", "tigrcorn", "hypercorn", "gunicorn", "tests"]
+provides-extras = ["numba", "postgres", "templates", "servers", "uvicorn", "tigrcorn", "hypercorn", "gunicorn", "tests"]
 
 [package.metadata.requires-dev]
 dev = [
@@ -4238,7 +4242,7 @@ dev = [
 
 [[package]]
 name = "tigrbl-core"
-version = "0.4.5"
+version = "0.4.6.dev1"
 source = { editable = "pkgs/10_core/tigrbl_core" }
 dependencies = [
     { name = "pydantic" },
@@ -5335,7 +5339,7 @@ dev = [
 
 [[package]]
 name = "tigrbl-orm"
-version = "0.4.5"
+version = "0.4.6.dev1"
 source = { editable = "pkgs/30_orm/tigrbl_orm" }
 dependencies = [
     { name = "sqlalchemy" },
@@ -5358,15 +5362,19 @@ dev = [
 
 [[package]]
 name = "tigrbl-runtime"
-version = "0.4.5"
+version = "0.4.6.dev1"
 source = { editable = "pkgs/50_runtime/tigrbl_runtime" }
 dependencies = [
-    { name = "numba" },
     { name = "tigrbl-atoms" },
     { name = "tigrbl-base" },
     { name = "tigrbl-core" },
     { name = "tigrbl-kernel" },
     { name = "tigrbl-typing" },
+]
+
+[package.optional-dependencies]
+numba = [
+    { name = "numba" },
 ]
 
 [package.dev-dependencies]
@@ -5379,13 +5387,14 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "numba", specifier = ">=0.61.2" },
+    { name = "numba", marker = "extra == 'numba'", specifier = ">=0.61.2" },
     { name = "tigrbl-atoms", editable = "pkgs/40_atoms/tigrbl_atoms" },
     { name = "tigrbl-base", editable = "pkgs/20_base/tigrbl_base" },
     { name = "tigrbl-core", editable = "pkgs/10_core/tigrbl_core" },
     { name = "tigrbl-kernel", editable = "pkgs/45_kernel/tigrbl_kernel" },
     { name = "tigrbl-typing", editable = "pkgs/00_typing/tigrbl_typing" },
 ]
+provides-extras = ["numba"]
 
 [package.metadata.requires-dev]
 dev = [
