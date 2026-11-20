@@ -9,4 +9,4 @@ jobs:
     uses: tigrbl/tigrbl/.github/workflows/readme-standards.yml@docs/readme-standards-20261119
   default-branch:
     if: ${{ github.event.pull_request.number != 62 || github.event.pull_request.head.repo.full_name != github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/readme-standards.yml@master
+    uses: tigrbl/tigrbl/.github/workflows/readme-standards.yml@6bbcf1397f49ae3704f87598e55616e1520b3dbd
