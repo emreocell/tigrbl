@@ -1,5 +1,6 @@
-# Call trusted reusable workflow refs so the restricted runner group can authenticate jobs.
-# Fallback definitions are immutable; the checkout still tests the pull request merge revision.
+# Reusable CI policy is pinned to a reviewed immutable revision.
+# The checkout still tests the pull-request merge revision.
+# Update these pins when changing workflow definitions.
 name: Pull request CI
 on:
   pull_request:
@@ -9,81 +10,29 @@ concurrency:
   group: pull-request-ci-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 jobs:
-  branch-coverage-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/branch-coverage.yml@docs/readme-standards-20261119
-  branch-coverage-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/branch-coverage.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  cli-smoke-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/cli-smoke.yml@docs/readme-standards-20261119
-  cli-smoke-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/cli-smoke.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  evidence-lanes-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/evidence-lanes.yml@docs/readme-standards-20261119
-  evidence-lanes-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/evidence-lanes.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  gate-b-surface-closure-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/gate-b-surface-closure.yml@docs/readme-standards-20261119
-  gate-b-surface-closure-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/gate-b-surface-closure.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  gate-c-conformance-security-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/gate-c-conformance-security.yml@docs/readme-standards-20261119
-  gate-c-conformance-security-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/gate-c-conformance-security.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  gate-d-reproducibility-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/gate-d-reproducibility.yml@docs/readme-standards-20261119
-  gate-d-reproducibility-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/gate-d-reproducibility.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  gate-e-promotion-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/gate-e-promotion.yml@docs/readme-standards-20261119
-  gate-e-promotion-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/gate-e-promotion.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  gate-runtime-boundary-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/gate-runtime-boundary.yml@docs/readme-standards-20261119
-  gate-runtime-boundary-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/gate-runtime-boundary.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  operator-surface-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/operator-surface.yml@docs/readme-standards-20261119
-  operator-surface-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/operator-surface.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  policy-governance-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/policy-governance.yml@docs/readme-standards-20261119
-  policy-governance-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/policy-governance.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  post-promotion-handoff-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/post-promotion-handoff.yml@docs/readme-standards-20261119
-  post-promotion-handoff-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/post-promotion-handoff.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  release-certification-automation-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/release-certification-automation.yml@docs/readme-standards-20261119
-  release-certification-automation-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/release-certification-automation.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
-  readme-standards-reviewed:
-    if: ${{ github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository }}
-    uses: tigrbl/tigrbl/.github/workflows/readme-standards.yml@docs/readme-standards-20261119
-  readme-standards-default:
-    if: ${{ !(github.event.pull_request.number == 62 && github.event.pull_request.head.repo.full_name == github.repository) }}
-    uses: tigrbl/tigrbl/.github/workflows/readme-standards.yml@3d317e93247403706fb1efcc0fc338c3440ddc05
+  branch-coverage:
+    uses: tigrbl/tigrbl/.github/workflows/branch-coverage.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  cli-smoke:
+    uses: tigrbl/tigrbl/.github/workflows/cli-smoke.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  evidence-lanes:
+    uses: tigrbl/tigrbl/.github/workflows/evidence-lanes.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  gate-b-surface-closure:
+    uses: tigrbl/tigrbl/.github/workflows/gate-b-surface-closure.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  gate-c-conformance-security:
+    uses: tigrbl/tigrbl/.github/workflows/gate-c-conformance-security.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  gate-d-reproducibility:
+    uses: tigrbl/tigrbl/.github/workflows/gate-d-reproducibility.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  gate-e-promotion:
+    uses: tigrbl/tigrbl/.github/workflows/gate-e-promotion.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  gate-runtime-boundary:
+    uses: tigrbl/tigrbl/.github/workflows/gate-runtime-boundary.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  operator-surface:
+    uses: tigrbl/tigrbl/.github/workflows/operator-surface.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  policy-governance:
+    uses: tigrbl/tigrbl/.github/workflows/policy-governance.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  post-promotion-handoff:
+    uses: tigrbl/tigrbl/.github/workflows/post-promotion-handoff.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  release-certification-automation:
+    uses: tigrbl/tigrbl/.github/workflows/release-certification-automation.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
+  readme-standards:
+    uses: tigrbl/tigrbl/.github/workflows/readme-standards.yml@e47a00ac5a9c27f64a99c387ec7e838f5c86586a
