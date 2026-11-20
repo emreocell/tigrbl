@@ -114,7 +114,7 @@
       "name": "tigrbl",
       "manifest": "pkgs/80_facade/tigrbl/pyproject.toml",
       "before_sha256": "03424e7dcf6f49eb03a74b5ee55c323793fa54fe7dead06d3122cfd44c24f879",
-      "after_sha256": "9856cfdd3939c59974e0d7045b6b299f8cf180999288fec81e7e10a80524c15d",
+      "after_sha256": "464718d64f7f5d5e09cb1d1af3e3f3c9c41bf4054b0e227c5b091be9cbe59a0f",
       "example_origin": "existing README Python example"
     },
     {

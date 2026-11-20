@@ -164,6 +164,10 @@ Configure `tigrbl` through the APIs in [package source](https://github.com/tigrb
 
 ### Error Handling
 
+- Do: Handle validation and authorization failures at their operation or CLI boundary, preserving typed errors for the transport binding.
+- Why: Callers depend on predictable status codes and error envelopes to distinguish invalid input, denied access, and execution failures.
+- Avoid: Returning a success response after a failed operation or exposing credentials and internal tracebacks in public error messages.
+
 The inspected `tigrbl` source raises `AttributeError`, `CLIError`, `KeyError`, `SystemExit`, `TypeError`, `ValueError`. Handle these at the calling boundary and consult the implementation for the triggering conditions.
 
 ### Best Practices
@@ -416,6 +420,7 @@ Tigrbl is organized as a split framework behind this facade:
 
 Use the facade for application code unless you are maintaining a framework layer, testing a boundary in isolation, or writing a package that intentionally plugs into one of the lower layers.
 
+<!-- tigrbl:authoring-bcp:begin -->
 **Convenient Authoring Path and Best Current Practice (BCP)**
 
 Tigrbl is most convenient when application code describes behavior once and lets the framework project that behavior into routes, RPC methods, schemas, docs, lifecycle hooks, diagnostics, tests, and transport-aware runtime plans. The best current practice is to use tables, default canonical operations, operation specs, custom handlers, and lifecycle hooks together instead of spreading one behavior across lower-level framework surfaces. The detailed policy is in [`docs/developer/AUTHORING_BCP.md`](https://github.com/tigrbl/tigrbl/blob/master/docs/developer/AUTHORING_BCP.md).
@@ -533,6 +538,8 @@ Tigrbl application authoring contract.
 - Avoid: Duplicating release, certification, target-state, or conformance claims outside governed evidence records.
 - Do: Use `.ssot/`, conformance docs, release evidence, and certification reports for governed feature, claim, release, evidence, and target-state questions.
 - Why: Release status and proof chains need one source of truth so package docs do not drift from CI and certification evidence.
+
+<!-- tigrbl:authoring-bcp:end -->
 
 **Default CRUD and Operation Semantics**
 
