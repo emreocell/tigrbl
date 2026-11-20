@@ -324,7 +324,7 @@
       "name": "tigrbl-equivalence-contracts",
       "manifest": "pkgs/96_examples/equivalence_contracts/pyproject.toml",
       "before_sha256": "2be55538b3df783eef765598b628fcaddd5ea2df0d2a397fd244f33006bb96cf",
-      "after_sha256": "9eedce833777e12191217f6a0ed6cbe5368ac14b70daba8f3971fce51058b3c1",
+      "after_sha256": "24ce03a3a75a19993ac555c56683874e7526328abbb978435335495b4f66ec48",
       "example_origin": "existing README Python example"
     },
     {

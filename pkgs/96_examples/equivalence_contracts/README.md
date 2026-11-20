@@ -66,7 +66,7 @@ experimental integrations do not imply production support for every transport.
 ### Features
 
 - `FrameworkImplementation`: One framework entry in an equivalence row.
-- `CertificationResult`: The evidence produced after one equivalence row has been certified.
+- `CertificationResult`: The evidence produced after evaluating one equivalence row.
 - `CertifiableEquivalence`: A row in the technical-marketing equivalence matrix.
 - `Base`: declared in src/tigrbl_equivalence_contracts/equivalences/event_stream_table/fastapi_impl.py
 - `WidgetRow`: declared in src/tigrbl_equivalence_contracts/equivalences/event_stream_table/fastapi_impl.py
