@@ -748,7 +748,7 @@ Changes to `tigrbl` follow the maintainer review process of [tigrbl/tigrbl](http
 
 ### Lifecycle and Migration
 
-The `tigrbl` source version is `0.4.6.dev1`. This change standardizes documentation and adds a development-only gate; it does not publish a new runtime version or declare a previously unpublished package released. Preserve explicit deprecation and replacement instructions where present.
+Source and published versions are identified separately in the branding badges above. This change standardizes documentation and adds a development-only gate; it does not publish a new runtime version or declare a previously unpublished package released. Preserve explicit deprecation and replacement instructions where present.
 
 ---
 

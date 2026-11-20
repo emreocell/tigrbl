@@ -344,7 +344,7 @@ Changes to `tigrbl-equivalence-contracts` follow the maintainer review process o
 
 ### Lifecycle and Migration
 
-The `tigrbl-equivalence-contracts` source version is `0.0.0+local`. This change standardizes documentation and adds a development-only gate; it does not publish a new runtime version or declare a previously unpublished package released. Preserve explicit deprecation and replacement instructions where present.
+Source and published versions are identified separately in the branding badges above. This change standardizes documentation and adds a development-only gate; it does not publish a new runtime version or declare a previously unpublished package released. Preserve explicit deprecation and replacement instructions where present.
 
 ---
 

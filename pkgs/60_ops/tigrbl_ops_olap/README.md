@@ -371,7 +371,7 @@ Changes to `tigrbl-ops-olap` follow the maintainer review process of [tigrbl/tig
 
 ### Lifecycle and Migration
 
-The `tigrbl-ops-olap` source version is `0.4.5`. This change standardizes documentation and adds a development-only gate; it does not publish a new runtime version or declare a previously unpublished package released. Preserve explicit deprecation and replacement instructions where present.
+Source and published versions are identified separately in the branding badges above. This change standardizes documentation and adds a development-only gate; it does not publish a new runtime version or declare a previously unpublished package released. Preserve explicit deprecation and replacement instructions where present.
 
 ---
 

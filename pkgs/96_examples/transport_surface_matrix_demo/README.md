@@ -430,7 +430,7 @@ Changes to `tigrbl-transport-surface-matrix-demo` follow the maintainer review p
 
 ### Lifecycle and Migration
 
-The `tigrbl-transport-surface-matrix-demo` source version is `0.1.0`. This change standardizes documentation and adds a development-only gate; it does not publish a new runtime version or declare a previously unpublished package released. Preserve explicit deprecation and replacement instructions where present.
+Source and published versions are identified separately in the branding badges above. This change standardizes documentation and adds a development-only gate; it does not publish a new runtime version or declare a previously unpublished package released. Preserve explicit deprecation and replacement instructions where present.
 
 ---
 
