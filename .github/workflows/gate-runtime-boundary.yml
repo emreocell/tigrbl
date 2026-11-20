@@ -1,11 +1,7 @@
 name: Gate Runtime Boundary
 
 on:
-  pull_request:
-    paths:
-      - "pkgs/50_runtime/tigrbl_runtime/**"
-      - "tools/ci/validate_runtime_boundary.py"
-      - ".github/workflows/gate-runtime-boundary.yml"
+  workflow_call:
   push:
     branches: [master, main]
     paths:
