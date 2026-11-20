@@ -6,7 +6,7 @@
 <p align="center">SQLAlchemy ORM tables, mixins, columns, model helpers, and persistence primitives for Tigrbl applications.</p>
 <p align="center">
 <a href="https://pypi.org/project/tigrbl-orm/"><img alt="pypi: tigrbl-orm" src="https://img.shields.io/pypi/v/tigrbl-orm"></a>
-<a href="https://github.com/tigrbl/tigrbl/blob/master/pkgs/30_orm/tigrbl_orm/pyproject.toml"><img alt="Source version: 0.4.6.dev1" src="https://img.shields.io/static/v1?label=Source%20version&amp;message=0.4.6.dev1&amp;color=525252"></a>
+<a href="https://github.com/tigrbl/tigrbl/blob/master/pkgs/30_orm/tigrbl_orm/pyproject.toml"><img alt="Source version: 0.4.6.dev2" src="https://img.shields.io/static/v1?label=Source%20version&amp;message=0.4.6.dev2&amp;color=525252"></a>
 <a href="https://github.com/tigrbl/tigrbl/blob/master/pkgs/30_orm/tigrbl_orm/pyproject.toml"><img alt="Python: &gt;=3.10,&lt;3.15" src="https://img.shields.io/static/v1?label=Python&amp;message=%3E%3D3.10%2C%3C3.15&amp;color=525252"></a>
 <a href="https://github.com/tigrbl/tigrbl/blob/master/pkgs/30_orm/tigrbl_orm/pyproject.toml"><img alt="Layer: 30_orm" src="https://img.shields.io/static/v1?label=Layer&amp;message=30_orm&amp;color=525252"></a>
 <a href="https://github.com/tigrbl/tigrbl/blob/master/pkgs/30_orm/tigrbl_orm/README.md#lifecycle-and-migration"><img alt="Lifecycle: active" src="https://img.shields.io/static/v1?label=Lifecycle&amp;message=active&amp;color=525252"></a>

@@ -9,315 +9,315 @@
       "name": "tigrbl-typing",
       "manifest": "pkgs/00_typing/tigrbl_typing/pyproject.toml",
       "before_sha256": "f665f1271f6e0d3509e80651c0f39dafb2936c2842d750fa1f7fde970ef11ad1",
-      "after_sha256": "eb5278937be23cd9c27a34873aa26c6278a6ee7c08ccf23a00e3cf70571d1b8e",
+      "after_sha256": "4cd486299d63a7135d5d15acc6edaa368d8e9c3115783d66b9f8db4fd2c733bb",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_spec",
       "manifest": "pkgs/01_spec/tigrbl_spec/pyproject.toml",
       "before_sha256": "7ac28689c846820293d8502919e632d53ad65fffc15ab15704625a88812993af",
-      "after_sha256": "fcbba4db42bc45f9bc448bb6ac716161a34929f974c4891be24c7a99fd44d481",
+      "after_sha256": "d59b4e0a20f211a5c25c84676289bcca4dbc9240de07b472a64a2718d9ce6290",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_model",
       "manifest": "pkgs/02_model/tigrbl_model/pyproject.toml",
       "before_sha256": "26bdde54276f7ecf1abc11d109237027c7cb4395a2b7d9cb5fde503028501af0",
-      "after_sha256": "4f17cc28f46b0793c6573f05b3998d106fa18c6b6d35624e0b2fd0f2393cb1e7",
+      "after_sha256": "45cc23079c5365de0f1a467d81becdf03ed51ce8ceb7259c832cd5ecfde97c22",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-core",
       "manifest": "pkgs/10_core/tigrbl_core/pyproject.toml",
       "before_sha256": "dd472f8fd1a1860cc85cc0cac8eb2c6d9a3cfd7376dff856982bb91bdeb10234",
-      "after_sha256": "6dd75d32d14837283ecca784ed2c6fc571f161696e53f383498a4cbf385d61e7",
+      "after_sha256": "a6e8103dec87992d096e23dda344ce514bf88f79decc2d8d5225ea3004aac8e2",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-migrations",
       "manifest": "pkgs/10_core/tigrbl_migrations/pyproject.toml",
       "before_sha256": "f46adccae0c1d8ae2b83be8c0cd473e0f042995bf37f2fb9a448b63ffb2fde99",
-      "after_sha256": "62bb1e9c002379ed03fcf2124f54fa7f619e604efff63632c92d3cfd5436dbf8",
+      "after_sha256": "f07490f267de0357712bf207ee2fc08a4ded48e6e4673fb5e19bde2628bde252",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-base",
       "manifest": "pkgs/20_base/tigrbl_base/pyproject.toml",
       "before_sha256": "030eb71fc6f481d4d1aed662cde80c91b2808e874942f9ac8a3e5e01ca583940",
-      "after_sha256": "08ca431f4400df423cf55195d2ded2a801c18680ecbfd6e50d14921bc1443ce4",
+      "after_sha256": "b6721c7c0238b0c03ab78356adc806f747efbcaa71537c20748ac8b2ad127d23",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-orm",
       "manifest": "pkgs/30_orm/tigrbl_orm/pyproject.toml",
       "before_sha256": "b02354cce6d76424c7188102d2f4d6c16422a33ab8d6e85b45a98e4a94281709",
-      "after_sha256": "cb36f5cd5ca5cd34b9cf96dd751348478db39dc4af13ded63529f25c3221142a",
+      "after_sha256": "dbb8ba9bb284e419983b2fd98e7659326189e787f9151567dbff3a87c316082f",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-atoms",
       "manifest": "pkgs/40_atoms/tigrbl_atoms/pyproject.toml",
       "before_sha256": "c1f44698bf03c854ef70ab82fb622d24587a9a01a3aaa86715571795dbe3d31d",
-      "after_sha256": "e90d4d2e26d4f1926ffa714ab959dca638db4839162066a551ed2d320b05f7ad",
+      "after_sha256": "add38de0315571a3c737da575d894b03f0793201f9358b93b3a73ff3b357a848",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-kernel",
       "manifest": "pkgs/45_kernel/tigrbl_kernel/pyproject.toml",
       "before_sha256": "83a0bfc9982045d217324138bef660d373c35568584b5f02ff9520df47bba255",
-      "after_sha256": "6984d90ea12cefa7904eefb47f36b441d679e6d4eafdbed934e48f6bca15d7d8",
+      "after_sha256": "d0e114a6f210980ed4d5c2dd3e6904e811f02cd3d24e2c78f09d653410809ff9",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-runtime",
       "manifest": "pkgs/50_runtime/tigrbl_runtime/pyproject.toml",
       "before_sha256": "d73717c3ebce09f88fef13dab1309261874f9a679a8ffcc44acbd771ecb18ad8",
-      "after_sha256": "1c86c9a2c9d47f38c02ab2d2f2d5b06ddb7aa0fa829d26cc4a884aa8528975ae",
+      "after_sha256": "76cb84657081e6de668fef2ad3b82895d06cfec8772a282aa5da38173be6a3e8",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-ops-olap",
       "manifest": "pkgs/60_ops/tigrbl_ops_olap/pyproject.toml",
       "before_sha256": "2ab2c848ffeadfed08da759bac15a9638c275f1e8370756bfeacae61f73601f6",
-      "after_sha256": "7e90ef9e51afbea861f8a8e3588f5753d271781a6bccd26bd159009e0b8d4677",
+      "after_sha256": "928ce1ca759dc291a66dd1e9c0db668f555c9b8556c4969651a9b3e84a36b110",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-ops-oltp",
       "manifest": "pkgs/60_ops/tigrbl_ops_oltp/pyproject.toml",
       "before_sha256": "e7a41772710689a27b00443bbf320a4c425b5a940dec3a7f199046e6a503ced2",
-      "after_sha256": "cc8792251be5b62470970be53ea758b1633cf7aa2a7bb7b664339ccee718345b",
+      "after_sha256": "8a74d118e53f9c14f12baae2d337daf6cd6c44a11ce26025d8ab38a382d4c588",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-ops-realtime",
       "manifest": "pkgs/60_ops/tigrbl_ops_realtime/pyproject.toml",
       "before_sha256": "379883b665dec4b73acab2d001598b5a9f558994dce4156035a5cee9787dbe0f",
-      "after_sha256": "c1c8df85bb2a096798a7c74529269efd38d52449f0b406d86faea3ce3486ba0e",
+      "after_sha256": "b830362317b669b7a39aaf534482e535dc7ee940d20e65b6bf8cacfd4a382f40",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-ops-webtransport",
       "manifest": "pkgs/60_ops/tigrbl_ops_webtransport/pyproject.toml",
       "before_sha256": "43645d325588aa10816420230e73962bd16a65263ede8721b424d23936b0e8bc",
-      "after_sha256": "5b5f2abea40b93c163df4d8778457b783978d6e546b801756a48f63a5bab5024",
+      "after_sha256": "e448eafbd34e0cdb54a69b12048b4c47aadaa09768391601ff800a2e5bbcee86",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl-concrete",
       "manifest": "pkgs/70_concrete/tigrbl_concrete/pyproject.toml",
       "before_sha256": "9ad696b45ef47563ab9e4366b211694f6ccfb50625b912977e2d553e75f807f1",
-      "after_sha256": "be7cfb824afb881c83d228e0a9b9507a11f598ecd26e0d1becd897b9afe4a4bd",
+      "after_sha256": "c6658050ac4526e9449e5b8960544f9fcc9b50150f31f378ff06b4540bdce4dd",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl",
       "manifest": "pkgs/80_facade/tigrbl/pyproject.toml",
       "before_sha256": "03424e7dcf6f49eb03a74b5ee55c323793fa54fe7dead06d3122cfd44c24f879",
-      "after_sha256": "64b02e8eead3094b81b4ef7f20d4bd01f3e8f08123a96d6fdb28943c5287d403",
+      "after_sha256": "8967c9df5d40338ef34d0502e54db8ef47ce920a5ca2c40642238ee6ad592af5",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_bigquery",
       "manifest": "pkgs/90_engines/tigrbl_engine_bigquery/pyproject.toml",
       "before_sha256": "6a3c90eeca21f21d1c637d6dd282fc35217cbab935ca742009a370630cda1821",
-      "after_sha256": "78d7de6f548c1231a13bdf54a19e886d95f4c1384f439b97c1ade5c277c5aef0",
+      "after_sha256": "d97ab076f83b2024c80d1560a43e8a9fd1229f80c542d325e580fbb9fa083468",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_clickhouse",
       "manifest": "pkgs/90_engines/tigrbl_engine_clickhouse/pyproject.toml",
       "before_sha256": "10d976f66bb2bb89ebf4dd409d6792a05243a0804fc1c22ac9f41f572c96e814",
-      "after_sha256": "d7df2040768a30674a31178ae140cc23d40cfb24c755580a0f289eca1d5dab50",
+      "after_sha256": "55d0137493ace08bcb0fc7bc846ea2c6ee874395f530f0e11e0fc7b4477e202c",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_csv",
       "manifest": "pkgs/90_engines/tigrbl_engine_csv/pyproject.toml",
       "before_sha256": "4bff555d54f44587f4880fc6b2b300e5f08e0fb4946a58d766557be1d62a5b70",
-      "after_sha256": "b8402b397da41e041405f1618a2208e9ec25d91be323ebc66e06c571bbbc4490",
+      "after_sha256": "bf67454f54a3e2cf3b556ec393d33d80947f0c406d25e5cc78382e54166d0c5c",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_dataframe",
       "manifest": "pkgs/90_engines/tigrbl_engine_dataframe/pyproject.toml",
       "before_sha256": "264d297ea21c3aa667d6e67a40cb6d85ecc509b03f7cd74f9e9a6f59af4d67f4",
-      "after_sha256": "b766c6d788c8903e5da7db6ddf1fb37b26758f0eedfe58bc53182460b777063c",
+      "after_sha256": "0f1f63c8dcac91a0bdd6f6cbd19708c0bd2967b35748fb8d94f4a7a932fbac23",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_duckdb",
       "manifest": "pkgs/90_engines/tigrbl_engine_duckdb/pyproject.toml",
       "before_sha256": "436effb770bbba68fd2fce060336208ac7e054411830e482c36976642725d510",
-      "after_sha256": "57639d4b0c4952311a57521cdf069fdca1925c24014ecbed2ca482f6a3bd45ad",
+      "after_sha256": "7d07165ab258b6a3f303bb2af1c399db49768efbccd2d7109fe4782af0e6bfea",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_inmemcache",
       "manifest": "pkgs/90_engines/tigrbl_engine_inmemcache/pyproject.toml",
       "before_sha256": "be8534a9066bb65535bfd7fa8ba040632baf81c683a450f2edc7082bb09b86b6",
-      "after_sha256": "d64761e065253aa07d9c9797b5a326d503c3914f825b7fe5d09ef2a9559a2a35",
+      "after_sha256": "3a9d6e18be5dfb2ff8c7eb29b72d1996fad9381d60b26c95153d9df71e03ab5b",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_inmemory",
       "manifest": "pkgs/90_engines/tigrbl_engine_inmemory/pyproject.toml",
       "before_sha256": "231e1c76605625ed3eeeffb21b97cce0dd219ff557082faba8e878fbcc3ba1a5",
-      "after_sha256": "740aa151694d84919bfc7ae44605dfe4dda39ce73af7f7085b3ffb47615af34b",
+      "after_sha256": "6ac47be1eac2055e41684579631d6632414e950a1f9e4a57db641aa074d28cb8",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_mariadb",
       "manifest": "pkgs/90_engines/tigrbl_engine_mariadb/pyproject.toml",
       "before_sha256": "0ad4055bf7a058ca1ea47b9a6eed9e84c280ac4c889a7549c58ee9a06e058a4d",
-      "after_sha256": "32ce18c1453fda86084dc6fcf8ad64bf9e7f2d1a6e0784ed3cb5dc303a3d1fdf",
+      "after_sha256": "1ef9a96def6bc7b8606d0859dfe5573090972648c17977b023fa576e65ba5e51",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_membloom",
       "manifest": "pkgs/90_engines/tigrbl_engine_membloom/pyproject.toml",
       "before_sha256": "cabbb703fd2ae39afc721fef5138a04c4801cb188a0763b250db22aa4a19292f",
-      "after_sha256": "a832ec9c6fe5b6a748914e3170bb1c07d67d7d5328c2bfbbedfd9e725f670ee3",
+      "after_sha256": "5ef24add927af73b49f3f3a138cfb6d6cea1bf66f6bf5b622f1a9f0c5abd005b",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_memdedupe",
       "manifest": "pkgs/90_engines/tigrbl_engine_memdedupe/pyproject.toml",
       "before_sha256": "3085cb8ce3eeb2d5a5483178c3a2275db0bf8475bc60ba9e7b1a4bed372d02f9",
-      "after_sha256": "2e56d545ae4b77c462e8039d5e11c2b31e080811f6d19aeda7085b404d6a8388",
+      "after_sha256": "fcc25810a56b96b2d4751a0b265db39a0e76932b60751dba1db36874de8f80c5",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_memkv",
       "manifest": "pkgs/90_engines/tigrbl_engine_memkv/pyproject.toml",
       "before_sha256": "695c395e460ccf5502630bedd83cc1647c07c83f8ea521fd4411aa7ea7029e14",
-      "after_sha256": "866078b8742222dd1fde06a42323a07fb2f4ab7bbe645f9a9fa427104d88ebad",
+      "after_sha256": "720986c2d96d28d4850bf62baaf96bca54e2adb27bbe945106ae255cc4d60473",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_memlru",
       "manifest": "pkgs/90_engines/tigrbl_engine_memlru/pyproject.toml",
       "before_sha256": "f1d34d8c7bf12d9ea9c3f9067b42ac07b7b36cca0d3a66a1434307a4f2af057d",
-      "after_sha256": "22cae32d6dcd1d7d519ff679a7030b1b63e47d4f0de2becd126bb364ff6ddad2",
+      "after_sha256": "2b2b9e93d1406112f94d6b04679f4fdde5ee841e9ae0d781036555cae1c3aaed",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_mempubsub",
       "manifest": "pkgs/90_engines/tigrbl_engine_mempubsub/pyproject.toml",
       "before_sha256": "e4daa4291c1ef3d2738b4482e26f54cd9ba9c525f036b904965a43fb643fa128",
-      "after_sha256": "88b441bb58df883ec0417de45a88e5cee1d1e365ccbe0d9868a83d51ab0661d3",
+      "after_sha256": "38f20169dd6463780b5cd5e516dc0f3695cea63b4167f67d847179e4890ed05e",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_memqueue",
       "manifest": "pkgs/90_engines/tigrbl_engine_memqueue/pyproject.toml",
       "before_sha256": "ba8e050bd665700da0b85387bcc0edcce78e05105d746c1cd3ecbb404dffdb3e",
-      "after_sha256": "a099633eb5209962ee2e4fa639d940f14dc63b95655ad0ef6be92e227fdac002",
+      "after_sha256": "18c2b54d86a63adfc10c0260d57d3754f9b289e34fe4a728fd1d96df4b8184d4",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_memrate",
       "manifest": "pkgs/90_engines/tigrbl_engine_memrate/pyproject.toml",
       "before_sha256": "8bcff4526b39b2edcf02ba04a1e05a6fdb4da0806a34b1bb73c1213e0635acea",
-      "after_sha256": "f657685417256c7b87deb9c2facdfb27c260f52a7562af48ef0e94ac262075c9",
+      "after_sha256": "b0418ab03906ea574b21ff021f6aaa29f43e296e0c0c40f04e6603654a9914b8",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_numpy",
       "manifest": "pkgs/90_engines/tigrbl_engine_numpy/pyproject.toml",
       "before_sha256": "b9a71a0eef600c8c24c35e195d1c269facf88a62ba713d8d4f215b34d86b8fd4",
-      "after_sha256": "927a788919a8c3bfca824dbc7fd692818c8d0b5e98930235a3be5fb865dfd049",
+      "after_sha256": "b5740ad06268e04aabbdfb18a93af13dc804ca3fb73ff59d62bd48cc6e96536d",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_pandas",
       "manifest": "pkgs/90_engines/tigrbl_engine_pandas/pyproject.toml",
       "before_sha256": "9d1d41c681674ac6285c0ce16b2ec150211e97f39bf1419242bf2be6503e7608",
-      "after_sha256": "e18e0b25d4d1bb4dc90ee727674fe7232dbf13dabaee9d03083d6bcded80c0c3",
+      "after_sha256": "a5a2cafee29e063481e57e56251f6d8abb98c3d438df814d0cb1056c3ce82c1c",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_pgsqli_wal",
       "manifest": "pkgs/90_engines/tigrbl_engine_pgsqli_wal/pyproject.toml",
       "before_sha256": "23c028f68a4dbd7aabe560f11ef700e7ac128a83721d0c3d227a54a820e7bd3c",
-      "after_sha256": "3eaac2ed30201348e186ae1126ada672464ed1fb364672ca39966271c304b717",
+      "after_sha256": "6e9b0c5e3184c9afb0c19701da7fe6f7f00db8d3d001e44c0248f16100597b07",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_postgres",
       "manifest": "pkgs/90_engines/tigrbl_engine_postgres/pyproject.toml",
       "before_sha256": "e12f04b45d652d4d842bee8e09a7f698b91e2cb2b54a83c207e4b4aeef6445d9",
-      "after_sha256": "b8032f0280b016211470a38cdf8c98642dc81c32b0afcdeb4bfaa17e3b2ba151",
+      "after_sha256": "ddcc604b4a72c11307676adfbb5ba52f1605593da8427a3de2548c42bd33e8c4",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_pyspark",
       "manifest": "pkgs/90_engines/tigrbl_engine_pyspark/pyproject.toml",
       "before_sha256": "2e8457962294b9b3108b4d456751fe5ac2ec9425f74e5c6515c02112c5673d84",
-      "after_sha256": "8d851ccf2bc686353a3339a23a73d0f6e21d58f2e90330c4981309c01e7206c9",
+      "after_sha256": "c7b543cd65447f30994b46e9da6808456403c92c02cae795809ad7c23358ec49",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_redis",
       "manifest": "pkgs/90_engines/tigrbl_engine_redis/pyproject.toml",
       "before_sha256": "6f5e9149175d4842b567aa96fd19436dfd1bbb855a854ef4bd53e88d8f513b40",
-      "after_sha256": "3b8a77510a8125a4d0b3f7d40f342fbc2315ea933d040f7b9d45bede5a579c14",
+      "after_sha256": "0ff21844f5550c852f3891f2ea3e12183dc69df16fe5a023a45d60f00ed3cd9a",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_rediscachethrough",
       "manifest": "pkgs/90_engines/tigrbl_engine_rediscachethrough/pyproject.toml",
       "before_sha256": "4e983a7ef015ca9fbaf49ab19a789b3ba8374d366b5ae03397e151d19b0faa5c",
-      "after_sha256": "0e0a3488924f57fcd00b5e0a013626492cd27954a4a35635f47ba7445d2af489",
+      "after_sha256": "0f0c6b9171fd421527d7d188a32fd0c2860d52853148a9a57b8d6d73eda11476",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_rom",
       "manifest": "pkgs/90_engines/tigrbl_engine_rom/pyproject.toml",
       "before_sha256": "a3aedb72ad70b7378948912689a51b3be527fd7fa8a7be44d961f4c455ca9d20",
-      "after_sha256": "65f28725e9b9e5859d0d676897aa32a9529bcc4bca0b0aa8ed07979c8f20ec2b",
+      "after_sha256": "5f2d4f862d518a187df48b25d5283b2967486e2072ad2f9cefc12c11221cd344",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_s3",
       "manifest": "pkgs/90_engines/tigrbl_engine_s3/pyproject.toml",
       "before_sha256": "9cdfa595b12b37477de5a1c2d6bc37cac7f2dc0e628b77614a4aaa0a6b575a68",
-      "after_sha256": "c91dfbac688bc7a8e41dab1cde01558625369cd81057147f92feae4fcddbea7d",
+      "after_sha256": "115f4dec8f2b4b309a45142a451f8403863cd9d3bc99741c46cc86a5b684650f",
       "example_origin": "public-module import smoke check; no application behavior is certified"
     },
     {
       "name": "tigrbl_engine_s3fs",
       "manifest": "pkgs/90_engines/tigrbl_engine_s3fs/pyproject.toml",
       "before_sha256": "dd6b66e14f90e53af3078a3458849027c1f44e58104c6b5c76989312e2c27ed0",
-      "after_sha256": "5a210cf1b80aace627978dd9d75a0ad543d2b931f5a2c16d50122a6c5043f152",
+      "after_sha256": "2fb19eb0c513a9450fec263ff307b41fc1420d93687f46a41f556091329fb69b",
       "example_origin": "public-module import smoke check; no application behavior is certified"
     },
     {
       "name": "tigrbl_engine_snowflake",
       "manifest": "pkgs/90_engines/tigrbl_engine_snowflake/pyproject.toml",
       "before_sha256": "b1eef3c22ef8f9622582dc3a66eeaf28851ea4b2faddba4279adb21223b465c7",
-      "after_sha256": "4a67298b223b2df2af5abc81dec4c46ad0c818b1686ced64cdfa58a20763036e",
+      "after_sha256": "fcfdb4a5b4122d3c54eca6b9b723fdf7d025fd461a87874b27a48bb50073e8c6",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_sqlite",
       "manifest": "pkgs/90_engines/tigrbl_engine_sqlite/pyproject.toml",
       "before_sha256": "829192d509717f8b94d3f3f1ff0123e2397a4ff4d211fb5a0cf98dc9ec69183d",
-      "after_sha256": "52c7c9aec0f438c666e739c224dfdffddb9c5fc56de8c5c68a7a831bf461b8fc",
+      "after_sha256": "424b31d12915480e0fd4da53199a4f70953cc2ec4790e34ac63658dba47b190e",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_engine_xlsx",
       "manifest": "pkgs/90_engines/tigrbl_engine_xlsx/pyproject.toml",
       "before_sha256": "41a9ca86a869045c69246e50ed2a118e70140a3c17472b43c8dee093f5c9db60",
-      "after_sha256": "e58a0f7ea52b92796a6e1fa13fa7b93d8e35fe48fdc252428c849fedae78013b",
+      "after_sha256": "515c8016a8400abf1befd2cf9f544b4a51af5cbf1968db8eb791802e9707553a",
       "example_origin": "existing README Python example"
     },
     {
       "name": "tigrbl_client",
       "manifest": "pkgs/95_client/tigrbl_client/pyproject.toml",
       "before_sha256": "1ed1d7a2034cc2b49207228de56979f6058faa524c94404bb2f67f570094c6dd",
-      "after_sha256": "ad33c5c0b7b3545571b68a1dcb132e1d7639a8d4cb00a2362fcf224a5f88365b",
+      "after_sha256": "352eefb22912fbac54c695772d815b865b1df72d451ce614bf5fb4b99fba2ead",
       "example_origin": "existing README Python example"
     },
     {
@@ -331,7 +331,7 @@
       "name": "tigrbl-examples",
       "manifest": "pkgs/96_examples/tigrbl_examples/pyproject.toml",
       "before_sha256": "374dc1d1cc62e91f386dedb03bb0b561934caf5d8ad7b38fdd97b14f30d3d5af",
-      "after_sha256": "78a55f68f0050b473bb9c9de87b945a22fe70bf0de6b757b950e8f87ce9932a0",
+      "after_sha256": "14986e8ee5d0b174e983b99d9613ecbdf0bfbc032cacff117924d374ac442118",
       "example_origin": "existing README Python example"
     },
     {
@@ -352,7 +352,7 @@
       "name": "tigrbl_tests",
       "manifest": "pkgs/97_tests/tigrbl_tests/pyproject.toml",
       "before_sha256": "d105f1f36149392ae2f0103f9d5e51411f34f6137e9b6efdd71bed741871c095",
-      "after_sha256": "6ff288aabab54020a91cfc7aefd4cc1d11f4583370cbb834f7db3b322d0b86fd",
+      "after_sha256": "b1a0598d82f5474bb8919aac859437b03c37135406aaa9aec9e5868dbfb4f8e5",
       "example_origin": "existing README Python example"
     },
     {
